@@ -1,0 +1,900 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Tailwind Boiler",
+    "theme_version": "0.11.0",
+    "theme_author": "Sparky",
+    "theme_support_url": "https:\/\/sparky.us",
+    "theme_documentation_url": "https:\/\/sparky.us"
+  },
+  {
+    "name": "Buttons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Button - Sizing"
+      },
+      {
+        "type": "range",
+        "id": "button_min_height",
+        "label": "Minimum Height",
+        "unit": "px",
+        "min": 32,
+        "max": 128,
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "button_min_width",
+        "label": "Minimum Width",
+        "unit": "px",
+        "min": 100,
+        "max": 200,
+        "default": 135
+      },
+      {
+        "type": "header",
+        "content": "Button - Padding"
+      },
+      {
+        "type": "range",
+        "id": "button_top_padding",
+        "label": "Top Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 8
+      },
+      {
+        "type": "range",
+        "id": "button_left_padding",
+        "label": "Left Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "button_bottom_padding",
+        "label": "Bottom Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 8
+      },
+      {
+        "type": "range",
+        "id": "button_right_padding",
+        "label": "Left Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Button - Styles"
+      },
+      {
+        "type": "range",
+        "id": "button_border_radius",
+        "label": "Border Radius",
+        "unit": "px",
+        "min": 0,
+        "max": 100,
+        "default": 0
+      },
+      {
+        "type": "select",
+        "id": "button_text_transform",
+        "label": "Text Transform",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "Capitalize",
+            "value": "capitalize"
+          },
+          {
+            "label": "Uppercase",
+            "value": "uppercase"
+          },
+          {
+            "label": "Lowercase",
+            "value": "lowercase"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Button Colors - Primary"
+      },
+      {
+        "id": "button_primary_background",
+        "label": "Background Color",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "id": "button_primary_border",
+        "label": "Border Color",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "id": "button_primary_text",
+        "label": "Text Color",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "id": "button_primary_background_hover",
+        "label": "Background Color - Hover",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "id": "button_primary_text_hover",
+        "label": "Text Color - Hover",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Button Colors - Secondary"
+      },
+      {
+        "id": "button_secondary_background",
+        "label": "Background Color",
+        "type": "color",
+        "default": "#fff"
+      },
+      {
+        "id": "button_secondary_border",
+        "label": "Border Color",
+        "type": "color",
+        "default": "#000"
+      },
+      {
+        "id": "button_secondary_text",
+        "label": "Text Color",
+        "type": "color",
+        "default": "#000"
+      },
+      {
+        "id": "button_secondary_background_hover",
+        "label": "Background Color - Hover",
+        "type": "color",
+        "default": "#000"
+      },
+      {
+        "id": "button_secondary_text_hover",
+        "label": "Text Color - Hover",
+        "type": "color",
+        "default": "#fff"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Theme colors"
+      },
+      {
+        "id": "primary_light",
+        "label": "Primary Light",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "id": "primary_dark",
+        "label": "Primary Dark",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "id": "secondary_light",
+        "label": "Secondary Light",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "id": "secondary_dark",
+        "label": "Secondary Dark",
+        "type": "color",
+        "default": "#000000"
+      }
+    ]
+  },
+  {
+    "name": "Inputs",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Inputs - Sizing"
+      },
+      {
+        "type": "range",
+        "id": "input_min_height",
+        "label": "Minimum Height",
+        "unit": "px",
+        "min": 32,
+        "max": 128,
+        "default": 50
+      },
+      {
+        "type": "header",
+        "content": "Input - Padding"
+      },
+      {
+        "type": "range",
+        "id": "input_top_padding",
+        "label": "Top Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 8
+      },
+      {
+        "type": "range",
+        "id": "input_bottom_padding",
+        "label": "Bottom Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 8
+      },
+      {
+        "type": "range",
+        "id": "input_x_padding",
+        "label": "Horizontal Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Input - Styles"
+      },
+      {
+        "type": "range",
+        "id": "input_border_radius",
+        "label": "Border Radius",
+        "unit": "px",
+        "min": 0,
+        "max": 100,
+        "default": 0
+      },
+      {
+        "type": "select",
+        "id": "input_text_transform",
+        "label": "Text Transform",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "Capitalize",
+            "value": "capitalize"
+          },
+          {
+            "label": "Uppercase",
+            "value": "uppercase"
+          },
+          {
+            "label": "Lowercase",
+            "value": "lowercase"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Input Colors"
+      },
+      {
+        "id": "input_background",
+        "label": "Background Color",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "id": "input_border",
+        "label": "Border Color",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "id": "input_text",
+        "label": "Text Color",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "id": "input_background_focus",
+        "label": "Background Color - Focus",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "id": "input_border_focus",
+        "label": "Border Color - Focus",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "id": "input_text_focus",
+        "label": "Text Color - Focus",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Labels Padding"
+      },
+      {
+        "type": "range",
+        "id": "labels_top_padding",
+        "label": "Top Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 8
+      },
+      {
+        "type": "range",
+        "id": "labels_bottom_padding",
+        "label": "Bottom Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 8
+      },
+      {
+        "type": "range",
+        "id": "labels_x_padding",
+        "label": "Horizontal Padding",
+        "unit": "px",
+        "min": 0,
+        "max": 50,
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Labels & Messages - Styles"
+      },
+      {
+        "type": "select",
+        "id": "labels_text_transform",
+        "label": "Labels - Text Transform",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "Capitalize",
+            "value": "capitalize"
+          },
+          {
+            "label": "Uppercase",
+            "value": "uppercase"
+          },
+          {
+            "label": "Lowercase",
+            "value": "lowercase"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "messages_text_transform",
+        "label": "Messages - Text Transform",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "Capitalize",
+            "value": "capitalize"
+          },
+          {
+            "label": "Uppercase",
+            "value": "uppercase"
+          },
+          {
+            "label": "Lowercase",
+            "value": "lowercase"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Label & Message Colors"
+      },
+      {
+        "id": "label_color",
+        "label": "Label Color",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "id": "success_color",
+        "label": "Success Message Color",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "id": "error_color",
+        "label": "Error Message Color",
+        "type": "color",
+        "default": "#000000"
+      }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      }
+    ]
+  },
+  {
+    "name": "Layout",
+    "settings": [
+      {
+        "type": "select",
+        "id": "page_width",
+        "options": [
+          {
+            "value": "1200",
+            "label": "Standard"
+          },
+          {
+            "value": "1600",
+            "label": "Wide"
+          }
+        ],
+        "default": "1600",
+        "label": "Wide"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social Media"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook Link"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "Pinterest Link"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "TikTok Link"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": "Tumblr Link"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_link",
+        "label": "Snapchat Link"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "YouTube Link"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": "Vimeo Link"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Font Families"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_header_font",
+        "default": "assistant_n4",
+        "label": "Header Font"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_custom_heading_font",
+        "label": "Use custom theme font?",
+        "info": "This will be the font uploaded and configured by the theme developer. If checked, we will use that uploaded font and disregard the font-picker."
+      },
+      {
+        "type": "font_picker",
+        "id": "type_body_font",
+        "default": "assistant_n4",
+        "label": "Body Font"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_custom_body_font",
+        "label": "Use custom theme font?",
+        "info": "This will be the font uploaded and configured by the theme developer. If checked, we will use that uploaded font and disregard the font-picker."
+      },
+      {
+        "type": "font_picker",
+        "id": "type_button_font",
+        "default": "assistant_n4",
+        "label": "Button Font"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_custom_button_font",
+        "label": "Use custom button font?",
+        "info": "This will be the font uploaded and configured by the theme developer. If checked, we will use that uploaded font and disregard the font-picker."
+      },
+      {
+        "type": "header",
+        "content": "Font Weights"
+      },
+      {
+        "type": "range",
+        "id": "heading_font_weight",
+        "label": "Headings - Font Weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 900
+      },
+      {
+        "type": "range",
+        "id": "body_font_weight",
+        "label": "Body - Font Weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 400
+      },
+      {
+        "type": "range",
+        "id": "input_font_weight",
+        "label": "Input - Font Weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 400
+      },
+      {
+        "type": "range",
+        "id": "input_label_font_weight",
+        "label": "Input Label - Font Weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 400
+      },
+      {
+        "type": "range",
+        "id": "input_message_font_weight",
+        "label": "Input Message - Font Weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 400
+      },
+      {
+        "type": "range",
+        "id": "button_font_weight",
+        "label": "Button - Font Weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 900
+      },
+      {
+        "type": "header",
+        "content": "Line Heights"
+      },
+      {
+        "type": "range",
+        "id": "body_line_height",
+        "label": "Body - Line Height",
+        "min": 12,
+        "max": 144,
+        "step": 2,
+        "default": 16 
+      },
+      {
+        "type": "range",
+        "id": "button_line_height",
+        "label": "Button - Line Height",
+        "min": 12,
+        "max": 144,
+        "step": 2,
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "h1_line_height",
+        "label": "H1 - Line Height",
+        "min": 12,
+        "max": 144,
+        "step": 2,
+        "default": 72
+      },
+      {
+        "type": "range",
+        "id": "h2_line_height",
+        "label": "H2 - Line Height",
+        "min": 12,
+        "max": 112,
+        "step": 2,
+        "default": 64
+      },
+      {
+        "type": "range",
+        "id": "h3_line_height",
+        "label": "H3 - Line Height",
+        "min": 12,
+        "max": 112,
+        "step": 2,
+        "default": 54
+      },
+      {
+        "type": "range",
+        "id": "h4_line_height",
+        "label": "H4 - Line Height",
+        "min": 12,
+        "max": 112,
+        "step": 2,
+        "default": 44
+      },
+      {
+        "type": "range",
+        "id": "h5_line_height",
+        "label": "H5 - Line Height",
+        "min": 12,
+        "max": 112,
+        "step": 2,
+        "default": 38
+      },
+      {
+        "type": "range",
+        "id": "h6_line_height",
+        "label": "H6 - Line Height",
+        "min": 12,
+        "max": 112,
+        "step": 2,
+        "default": 34
+      },
+      {
+        "type": "header",
+        "content": "Font Sizes - Mobile"
+      },
+      {
+        "type": "range",
+        "id": "body_font_size_mobile",
+        "label": "Body - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "input_font_size_mobile",
+        "label": "Input - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "input_label_font_size_mobile",
+        "label": "Input Label - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "input_message_font_size_mobile",
+        "label": "Input Message - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "button_font_size_mobile",
+        "label": "Button - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "h1_font_size_mobile",
+        "label": "H1 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "h2_font_size_mobile",
+        "label": "H2 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "h3_font_size_mobile",
+        "label": "H3 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 35
+      },
+      {
+        "type": "range",
+        "id": "h4_font_size_mobile",
+        "label": "H4 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "h5_font_size_mobile",
+        "label": "H5 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 25
+      },
+      {
+        "type": "range",
+        "id": "h6_font_size_mobile",
+        "label": "H6 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 20
+      },
+      {
+        "type": "header",
+        "content": "Font Sizes - Desktop"
+      },
+      {
+        "type": "range",
+        "id": "body_font_size_desktop",
+        "label": "Body - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "input_font_size_desktop",
+        "label": "Input - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "input_label_font_size_desktop",
+        "label": "Input Label - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "input_message_font_size_desktop",
+        "label": "Input Message - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "button_font_size_desktop",
+        "label": "Button - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "h1_font_size_desktop",
+        "label": "H1 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 70
+      },
+      {
+        "type": "range",
+        "id": "h2_font_size_desktop",
+        "label": "H2 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "h3_font_size_desktop",
+        "label": "H3 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "h4_font_size_desktop",
+        "label": "H4 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "h5_font_size_desktop",
+        "label": "H5 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 35
+      },
+      {
+        "type": "range",
+        "id": "h6_font_size_desktop",
+        "label": "H6 - Font Size",
+        "min": 12,
+        "max": 112,
+        "default": 30
+      }
+    ]
+  },
+  {
+    "name": "UPS Access Point",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "ups_access_point",
+        "label": "Enable UPS Access Point"
+      }
+    ]
+  }
+]

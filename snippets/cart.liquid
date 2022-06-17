@@ -1,0 +1,106 @@
+<custom-cart>
+    <div class="container max-w-6xl p-8 mx-auto">
+        <input type="number" name="updates[]" id="updates_{{ item.key }}" class="qty-input cart__product-qty" value="{{ item.quantity }}" min="0" max="{{ current_variant.inventory_quantity }}" data-id="{{ item.key }}">
+        <div class="flex flex-row w-full h-50 py-8">
+            <div class="flex w-1/2">
+                <h1 class="float-left pb-4 text-3xl font-semibold font-serif">Your Cart</h1>
+            </div>
+            <div class="flex w-1/2 justify-end">
+                <div class="float-right font-light text-md"><a class="border-black border-b" href="../">Continue Shopping..</a></div>
+            </div>
+        </div>
+        <div class="cart-container">
+            {% if cart.items.size > 0 %}
+                <div class="grid grid-cols-4 gap-4 w-full h-50 py-2 border-t">
+                    <div class="flex product w-1/4"> 
+                        <p class="float-left font-light">PRODUCT</p>
+                    </div>
+                    <div class="flex price w-1/4">
+                        <p class="float-right font-light">PRICE</p>
+                    </div>
+                    <div class="flex quantity w-1/4">
+                        <p class="float-left font-light">QUANTITY</p>
+                    </div>
+                    <div class="flex total w-1/4">
+                        <p class="float-right font-light">TOTAL</p>
+                    </div>
+                </div>
+            {% endif %}
+            <!-- line item info -->
+            <div class="border-black-900 border-t border-b flex flex-col w-full m-auto">
+                {% if cart.items.size > 0 %}
+                    {% for item in cart.items %}
+                        <div class="grid grid-cols-4 gap-4 {% unless forloop.first %}border-t{% endunless %}">
+                            <div class="product flex items-center py-2">
+                                <div class="float-left w-1/2">
+                                    <a href="{{ item.url }}" class="flex items-center justify-center">
+                                        <img class="w-28 h-28 object-contain" loading="lazy" alt="{{ item.featured_image.alt | default: item.title }}" width="100" height="100" src="{{ item | img_url: '100x' }}">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="price flex items-center w-full">
+                                <div class="float-right">
+                                    <a href="{{ item.url }}" class="flex flex-col pb-4">
+                                        <h3>{{ item.title }}</h3>
+                                        <span class="text-base opacity-60">
+                                            {{ item.product.metafields.descriptors.subtitle }}
+                                        </span>
+                                        <span class="font-light">{{ item.price | money }}</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="quantity flex items-center w-full">
+                                <div class="float-left font-light text-xs"> 
+                                    {% render 'cart-qty-selector' item: item %}
+                                    <div id="variant-inventory" class="text-center {% unless item.variant.available %} hide {% endunless %}">
+                                        {% if item.variant.inventory_management == "shopify" and item.variant.inventory_policy != "continue" %}
+                                            {% if item.variant.inventory_quantity < item.quantity %}
+                                                There are not enough items in stock.
+                                            {% endif %}
+                                            {% if item.variant.inventory_quantity <= 10 %}
+                                                {{ item.variant.inventory_quantity }} in stock.
+                                            {% endif %}
+                                        {% endif %} 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="total flex w-full">
+                                    {{ item.price | times: item.quantity | money }}
+                                </div>
+                                <div class="flex w-full m-auto">
+                                    <button data-delete="{{ item.key }}" class="disabled:opacity-20 w-5 h-5 ml-auto pr-16">
+                                        {% render 'icons' icon: 'trash' %}
+                                    </button>
+                                </div>  
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="w-full text-center py-8">Shopping Cart Empty...</div>
+                {% endif %}
+            </div>
+            {% if cart.items.size > 0 %}
+                <div class="pt-4 p-6 px-4 w-full text-right font-semibold font-serif">Subtotal {{ cart.total_price | money }}</div>
+            {% endif %}
+        </div>
+    </div>
+    {% if cart.items.size > 0 %}
+        <div class="container max-w-6xl px-8 mx-auto text-right justify-end sm:text-center py-4">
+            <p>Taxes and shipping calculated at checkout</p>
+        </div>
+    
+        <div class="flex justify-end container max-w-6xl p-8 mx-auto">
+          <form action="{{ routes.cart_url }}" method="post" id="cart" class="flex flex-col mt-auto w-full justify-center align-center sticky bottom-0 p-8 bg-white">
+            <button
+                {% if cart.items.size == 0 %} disabled {% endif %}
+                class="btn btn-dark inline w-1/8"
+                name="checkout"
+                form="cart"
+            >
+                CHECKOUT
+            </button>
+          </form>
+        </div>
+    {% endif %}
+</custom-cart>

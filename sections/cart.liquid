@@ -1,0 +1,18 @@
+{% render 'cart' %}
+
+<script src="{{ 'product-qty-selector.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Cart",
+  "tag": "article",
+  "class": "section"
+  "presets": [
+    {
+      "name": "Cart"
+    }
+  ]
+}
+{% endschema %}
+    

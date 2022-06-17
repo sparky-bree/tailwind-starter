@@ -1,0 +1,30 @@
+<strong class="font-bold hidden md:block {{ settings.footer_header_font_size_dt }} {{ section.settings.menu_titles_bottom_padding }}">{{ menu.title }}</strong>
+<ul class="flex flex-col menu text-footerText pt-4 md:pt-0">
+    {% for link in menu.links %}
+        <li class="block {{ section.settings.menu_links_vertical_padding }}">
+            {% if link.levels == 0 %}
+                <a 
+                    class="transition-short opacity-60 hover:opacity-100"
+                    href="{{ link.url }}"
+                >
+                    {{ link.title }}
+                </a>
+            {% endif %}
+            {% if link.levels > 0 %}
+                <span class="block font-bold text-footerText {{ section.settings.menu_subtitles_top_padding }} {{ section.settings.menu_subtitles_bottom_padding }} {{ settings.footer_subheading_font }} {{ settings.footer_subheader_font_size_mb }} {{ settings.footer_subheader_font_size_dt }}">{{ link.title }}</span>
+                <ul>
+                    {% for child_link in link.links %}
+                        <li class="block {{ section.settings.menu_links_vertical_padding }}">
+                            <a 
+                                class="transition-short opacity-60 hover:opacity-100"
+                                href="{{ child_link.url }}"
+                            >
+                                {{ child_link.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

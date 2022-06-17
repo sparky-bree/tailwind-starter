@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "1636142336f290ba56": {
+      "type": "hero",
+      "settings": {
+        "populate_automatically": false,
+        "heading_tag": "h1",
+        "desktop_heading": "<p>We're Here<\/p><p>to Help<\/p>",
+        "copy": "",
+        "desktop_button_text": "",
+        "desktop_button_link": "",
+        "button_uppercase": false,
+        "mobile_content_width": 100,
+        "tablet_content_width": 90,
+        "desktop_content_width": 80,
+        "heading_font_family": "font-heading",
+        "copy_font_family": "font-heading",
+        "button_font_family": "font-heading",
+        "heading_font_weight": "font-semibold",
+        "copy_font_weight": "font-semibold",
+        "button_font_weight": "font-bold",
+        "desktop_image": "shopify:\/\/shop_images\/PRO-Compression-Frequently-Asked-Quesetions.jpg",
+        "desktop_image_height": 500,
+        "content_desktop_alignment": "md:justify-start",
+        "text_desktop_alignment": "md:text-left",
+        "heading_font_size_desktop": "sm:text-5xl",
+        "copy_font_size_desktop": "sm:text-lg",
+        "button_font_size_desktop": "sm:text-base",
+        "button_x_padding_dt": 48,
+        "button_y_padding_dt": 20,
+        "desktop_text_color": "#000000",
+        "button_bg": "#ffffff",
+        "button_border": "#ffffff",
+        "button_hover_bg": "#000000",
+        "button_hover_border": "#000000",
+        "button_text": "#000000",
+        "button_hover_text": "#ffffff",
+        "mobile_image": "shopify:\/\/shop_images\/Jan_SOM_Slider_511e89e6-754d-42b2-9fa5-612b471dd6ff.jpg",
+        "mobile_image_height": 540,
+        "text_mobile_alignment": "text-left",
+        "text_mobile_vertical_alignment": "justify-start",
+        "heading_font_size_mobile": "text-3xl",
+        "copy_font_size_mobile": "text-lg",
+        "button_font_size_mobile": "text-base",
+        "button_x_padding_mb": 48,
+        "button_y_padding_mb": 20,
+        "mobile_text_color": "#445958",
+        "mobile_button_bg": "#ffffff",
+        "mobile_button_border": "#ffffff",
+        "mobile_button_text": "#000000"
+      }
+    },
+    "16361471285f8ec971": {
+      "type": "copy",
+      "settings": {
+        "main": false,
+        "text_alignment": "text-center",
+        "heading_tag": "strong",
+        "heading": "",
+        "heading_font_size": "text-xl",
+        "copy": "<p><\/p>",
+        "copy_font_size": "text-base",
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "1636142336f290ba56",
+    "16361471285f8ec971"
+  ]
+}

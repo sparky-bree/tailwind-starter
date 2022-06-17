@@ -1,0 +1,55 @@
+
+{% form 'customer' %}
+  <label for="ContactForm-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+  <input
+    autocomplete="email"
+    type="email"
+    id="ContactForm-email"
+    name="contact[email]"
+    spellcheck="false"
+    autocapitalize="off"
+    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+    aria-required="true"
+    {% if form.errors contains 'email' %}
+      aria-invalid="true"
+      aria-describedby="ContactForm-email-error"
+    {% endif %}
+    placeholder="{{ 'contact.form.email' | t }}"
+  >
+  {%- if form.errors contains 'email' -%}
+    <small>
+      <span>
+        {% render 'icons' icon: 'error' %}
+        {{ form.errors.translated_fields['email'] | capitalize }} 
+        {{ form.errors.messages['email'] }}
+      </span>
+    </small>
+  {%- endif -%}
+  <label for="ContactForm-phone">{{ 'contact.form.phone' | t }}</label>
+  <input type="tel" id="ContactForm-phone" autocomplete="tel" name="contact[{{ 'contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'contact.form.phone' | t }}">
+  <label  for="ContactForm-body">{{ 'contact.form.message' | t }}</label>
+  <textarea
+    rows="10"
+    id="ContactForm-body"
+    name="contact[{{ 'contact.form.message' | t }}]"
+    placeholder="{{ 'contact.form.message' | t }}"
+  >
+    {{- form.body -}}
+  </textarea>
+  <button type="submit">{{ 'contact.form.send' | t }}</button>
+{%- endform -%}
+
+
+{% schema %}
+{
+  "name": "Contact",
+  "tag": "section",
+  "class": "section"
+  "presets": [
+    {
+      "name": "Contact"
+    }
+  ]
+}
+{% endschema %}
+  

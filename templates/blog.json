@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "1636647372faabd85b": {
+      "type": "blog",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "h-72 md:h-[16.9rem] lg:h-80",
+        "show_date": true,
+        "show_author": true,
+        "text_desktop_alignment": "md:text-left",
+        "heading_font_size_desktop": "sm:text-2xl",
+        "heading_font_size_mobile": "text-3xl",
+        "mobile_vertical_padding": "py-4",
+        "mobile_horizontal_padding": "px-4",
+        "desktop_vertical_padding": "md:py-5",
+        "desktop_horizontal_padding": "md:px-0",
+        "text_desktop_alignment_post": "md:text-left",
+        "heading_font_size_desktop_post": "sm:text-lg",
+        "mobile_horizontal_padding_post": "px-4",
+        "desktop_horizontal_padding_post": "md:px-8"
+      }
+    }
+  },
+  "order": [
+    "1636647372faabd85b"
+  ]
+}

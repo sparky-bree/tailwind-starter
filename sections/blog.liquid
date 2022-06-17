@@ -1,0 +1,30 @@
+{%- paginate blog.articles by 6 -%}
+  <div>
+    <h1>{{ blog.title | strip_html }}</h1>
+
+    <div>
+      {%- for article in blog.articles -%}
+        <div>
+          article
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+  </div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Blog",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Blog"
+    }
+  ]
+}
+{% endschema %}

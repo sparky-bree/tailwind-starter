@@ -1,0 +1,82 @@
+{
+  "current": {
+    "favicon": "",
+    "announcement_bar_bg_color": "#060000",
+    "announcement_bar_text_color": "#ffffff",
+    "header_bg_color": "#ffffff",
+    "header_cart_icon": "#e22120",
+    "menu_drawer_bg_color": "#060000",
+    "menu_drawer_text_color": "#e5e5e5",
+    "footer_text_color": "#fafafa",
+    "show_product_swatches": true,
+    "qb_button_label": "Quick Add +",
+    "product_qb_button_color": "#ffffff",
+    "product_qb_button_color_hover": "#d4dade",
+    "announcement_bar_font": "font-heading",
+    "announcement_font_size_dt": "md:text-sm",
+    "navigation_font": "font-heading",
+    "navigation_font_weight": "font-semibold",
+    "navigation_font_size_dt": "md:text-base",
+    "drawer_font": "font-heading",
+    "footer_body_font": "font-heading",
+    "footer_copyright_font": "font-heading",
+    "footer_header_font_size_dt": "md:text-base",
+    "footer_header_font_size_mb": "text-base",
+    "footer_subheader_font_size_dt": "md:text-sm",
+    "collection_items_per_view_dt": "md:grid-cols-4",
+    "collection_items_per_view_mb": "grid-cols-2",
+    "collection_pagination": 12,
+    "cart_upsell_text": "",
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+    "social_youtube_link": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "small",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Roboto",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "show_announcement_bar": true,
+          "mobile_message": "",
+          "left_message": "",
+          "center_message": "",
+          "discount": "",
+          "announcement_y_padding": 17,
+          "product_menu": "",
+          "product_menu_footer": "",
+          "logo": "",
+          "logo_width": 344,
+          "logo_height": 64,
+          "logo_y_padding": 8,
+          "show_social": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "newsletter_heading": "",
+          "newsletter_copy": "",
+          "copyright_text": "",
+          "show_social_icons": true,
+          "primary_menu": "",
+          "secondary_menu": "",
+          "tertiary_menu": "",
+          "newsletter_vertical_padding": "py-6",
+          "menu_links_vertical_padding": "py-1",
+          "menu_titles_bottom_padding": "pb-1",
+          "menu_subtitles_top_padding": "pt-3.5",
+          "menu_subtitles_bottom_padding": "pb-1"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

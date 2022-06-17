@@ -1,0 +1,140 @@
+{% style %}
+
+{% unless settings.use_custom_heading_font %}
+  {{ settings.type_header_font | font_face }}
+{% endunless %}
+
+{% unless settings.use_custom_body_font %}
+  {{ settings.type_body_font | font_face }}
+{% endunless %}
+
+{% unless settings.use_custom_button_font %}
+  {{ settings.type_button_font | font_face }}
+{% endunless %}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  font-size: 16px;
+}
+
+.button,
+.button-secondary {
+  text-transform: {{ settings.button_text_transform }};
+}
+
+.input {
+  text-transform: {{ settings.input_text_transform }};
+}
+
+.label {
+  text-transform: {{ settings.labels_text_transform }};
+}
+
+.message {
+  text-transform: {{ settings.labels_text_transform }};
+}
+
+:root {
+  --body-font-size: {{ settings.body_font_size_desktop }}px;
+  --body-font-weight: {{ settings.body_font_weight }};
+  --body-line-height: {{ settings.body_line_height }}px;
+
+  --button-border-radius: {{ settings.button_border_radius }}px;
+  --button-bottom-padding: {{ settings.button_bottom_padding }}px;
+  --button-font-size: {{ settings.button_font_size_desktop }}px;
+  --button-font-weight: {{ settings.button_font_weight }};
+  --button-left-padding: {{ settings.button_left_padding }}px;
+  --button-line-height: {{ settings.button_line_height }}px;
+  --button-min-height: {{ settings.button_min_height }}px;
+  --button-min-width: {{ settings.button_min_width }}px;
+  --button-primary-background-color-hover: {{ settings.button_primary_background_hover }};
+  --button-primary-background-color: {{ settings.button_primary_background }};
+  --button-primary-border-color: {{ settings.button_primary_border }};
+  --button-primary-text-color-hover: {{ settings.button_primary_text_hover }};
+  --button-primary-text-color: {{ settings.button_primary_text }};
+  --button-right-padding: {{ settings.button_right_padding }}px;
+  --button-secondary-background-color-hover: {{ settings.button_secondary_background_hover }};
+  --button-secondary-background-color: {{ settings.button_secondary_background }};
+  --button-secondary-border-color: {{ settings.button_secondary_border }};
+  --button-secondary-text-color-hover: {{ settings.button_secondary_text_hover }};
+  --button-secondary-text-color: {{ settings.button_secondary_text }};
+  --button-top-padding: {{ settings.button_top_padding }}px;
+
+  --h1-font-size: {{ settings.h1_font_size_desktop }}px;
+  --h1-line-height: {{ settings.h1_line_height }}px;
+  --h2-font-size: {{ settings.h2_font_size_desktop }}px;
+  --h2-line-height: {{ settings.h2_line_height }}px;
+  --h3-font-size: {{ settings.h3_font_size_desktop }}px;
+  --h3-line-height: {{ settings.h3_line_height }}px;
+  --h4-font-size: {{ settings.h4_font_size_desktop }}px;
+  --h4-line-height: {{ settings.h4_line_height }}px;
+  --h5-font-size: {{ settings.h5_font_size_desktop }}px;
+  --h5-line-height: {{ settings.h5_line_height }}px;
+  --h6-font-size: {{ settings.h6_font_size_desktop }}px;
+  --h6-line-height: {{ settings.h6_line_height }}px;
+
+  --heading-font-weight: {{ settings.heading_font_weight }};
+
+  --input-font-size: {{ settings.input_font_size_desktop }}px;
+  --input-label-font-size: {{ settings.input_label_font_size_desktop }}px;
+  --input-message-font-size: {{ settings.input_message_font_size_desktop }}px;
+  --input-font-weight: {{ settings.input_font_weight }};
+  --input-label-font-weight: {{ settings.input_label_font_weight }};
+  --input-message-font-weight: {{ settings.input_message_font_weight }};
+  --input-min-height: {{ settings.input_min_height }}px;
+  --input-top-padding: {{ settings.input_top_padding }}px;
+  --input-bottom-padding: {{ settings.input_bottom_padding }}px;
+  --input-x-padding: {{ settings.input_x_padding }}px;
+  --input-border-radius: {{ settings.input_border_radius }}px;
+  --input-background-color: {{ settings.input_background }};
+  --input-border-color: {{ settings.input_border }};
+  --input-text-color: {{ settings.input_text }};
+  --input-background-color-focus: {{ settings.input_background_focus }};
+  --input-border-color-focus: {{ settings.input_border_focus }},
+  --input-text-color-focus: {{ settings.input_text_focus }};
+
+  {% unless settings.use_custom_heading_font %}
+    --header-font-family: {{ settings.type_header_font.family }};
+  {% endunless %}
+
+  {% unless settings.use_custom_body_font %}
+    --body-font-family: {{ settings.type_body_font.family }};
+  {% endunless %}
+
+  {% unless settings.use_custom_button_font %}
+    --button-font-family: {{ settings.type_button_font.family }};
+  {% endunless %}
+}
+
+@media(min-width: 768px) {
+  :root {
+    --body-font-size: {{ settings.body_font_size_desktop }}px;
+    
+    --button-font-size: {{ settings.button_font_size_desktop }}px;
+
+    --h1-font-size: {{ settings.h1_font_size_desktop }}px;
+    --h2-font-size: {{ settings.h2_font_size_desktop }}px;
+    --h3-font-size: {{ settings.h3_font_size_desktop }}px;
+    --h4-font-size: {{ settings.h4_font_size_desktop }}px;
+    --h5-font-size: {{ settings.h5_font_size_desktop }}px;
+    --h6-font-size: {{ settings.h6_font_size_desktop }}px;
+
+    --input-font-size: {{ settings.input_font_size_desktop }}px;
+    --input-label-font-size: {{ settings.input_label_font_size_desktop }}px;
+    --input-message-font-size: {{ settings.input_message_font_size_desktop }}px;
+  }
+}
+
+{% endstyle %}

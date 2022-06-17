@@ -1,0 +1,20 @@
+.rte a,
+.rte li a {
+    text-decoration: underline;
+    color: #0000EE;
+}
+
+.rte p, .rte p img, .rte iframe {
+    margin: 8px 0;
+}
+  
+.rte h1, .rte h2, .rte h3, .rte h4, .rte h5, .rte h6 {
+    font-weight: bold;
+    padding: 8px 0 4px;
+}
+
+.rte ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 16px;
+}

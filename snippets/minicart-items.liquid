@@ -1,0 +1,78 @@
+
+
+<div class="flex border-b items-center justify-between px-8 py-4 w-full sticky top-0 bg-white z-10">
+    <strong class="font-montserrat uppercase">Your Cart {% if cart.items.size > 0 %}({{ cart.items.size }}){% endif %}</strong>
+    <button class="w-6" data-continue-shopping aria-label="Close mini cart">{% render 'icons' icon: 'close' %}</div>
+</div>
+<div class="p-8 flex flex-col">
+    {% if cart.items.size > 0 %}
+        <div class="relative flex-shrink">
+            <div class="flex flex-col relative">
+                {% for item in cart.items %}
+                    <div class="flex flex-col{% unless forloop.last %}border-b{% endunless %} pb-2 border-current w-full">
+                        <div class="py-2 flex items-center w-full">
+                            <a href="{{ item.url }}" class="flex items-center w-3/12">
+                                <img
+                                    class="mr-6"
+                                    loading="lazy"
+                                    alt="{{ item.featured_image.alt | default: item.title }}"
+                                    width="100"
+                                    height="100"
+                                    src="{{ item | image_url: width: '75' }}"
+                                >      
+                            </a>
+                            <div class="flex flex-col w-9/12 ml-8">
+                                <a href="{{ item.url }}" class="pb-2 flex flex-col">
+                                    <h3 class="font-bold text-sm font-heading">
+                                        {{ item.title }}
+                                    </h3>
+                                    <span class="font-light">{{ item.price | money }}</span>
+                                </a>  
+                                <div class="flex items-stretch h-8">
+                                    {% unless item.product.has_only_default_variant %}
+                                        {% for option in item.product.options_with_values %}
+                                            <div class="flex border rounded border-current mr-4 overflow-hidden">
+                                                <select
+                                                    data-variants='{{ item.product.variants | json }}'
+                                                    data-change-variant="{{ item.key }}"
+                                                    data-qty="{{ item.quantity }}" 
+                                                    class="font-heading font-bold h-full px-2 uppercase bg-transparent"
+                                                >
+                                                    {% for value in option.values %}
+                                                        {% for variant in item.product.variants %}
+                                                            {% if variant.options contains value %}
+                                                                <option {% unless variant.available %} disabled {% endunless %} {% if item.variant.options contains value %}selected{% endif %} value="{{ value }}">{{ value }}</option>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        {% endfor %}
+                                    {% endunless %}
+                                    {% render 'product-qty-selector' product: item.product, item: item, compact: true %}
+                                    <div class="flex items-center pl-3 pr-1">
+                                        <button data-delete="{{ item.key }}" class="disabled:opacity-20 w-5 h-5 ml-auto">
+                                            {% render 'icons' icon: 'delete' %}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        Your cart is empty.
+    {% endif %}
+</div>
+<form action="{{ routes.cart_url }}" method="post" id="cart" class="flex flex-col mt-auto w-full justify-center align-center sticky bottom-0 p-8 bg-white">
+    <button
+        {% if cart.items.size == 0 %} disabled {% endif %}
+        class="bg-black text-white hover:bg-white hover:text-black border border-black block font-bold px-12 py-5 rounded text-center uppercase transition-short disabled:opacity-80 w-full"
+        name="checkout"
+        form="cart"
+    >
+        {% if cart.items.size > 0 %}{{ cart.items_subtotal_price | money }} - {% endif %}{{ 'sections.cart.checkout' | t }}
+    </button>
+</form>

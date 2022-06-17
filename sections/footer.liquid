@@ -1,0 +1,91 @@
+<div class="bg-footerBg w-full p-10 border {{ settings.footer_body_font }} {{ settings.footer_body_font_size_mb }} {{ settings.footer_body_font_size_dt }}">
+	<div class="flex flex-col w-full h-full text-footerText max-w-[1550px] m-auto">
+	<!-- Newsletter -->
+		<div class="flex flex-col lg:flex-row h-full pb-4">
+			<div class="pr-0 w-full lg:max-w-[25%] pb-5">
+				<strong class="font-bold leading-normal tracking-[.2px] {{ settings.footer_heading_font }} {{ settings.footer_header_font_size_mb }} {{ settings.footer_header_font_size_dt }}">{{ section.settings.newsletter_heading }}</strong>
+				<div class="{{ section.settings.newsletter_vertical_padding }}">{{ section.settings.newsletter_copy }}</div>
+				<div class="relative">
+					<span class="sr-only">Email Input (Newsletter)</span>
+					{% form 'customer', class: 'border rounded border-footerText flex items-stretch' %}
+						<input type="hidden" name="contact[tags]" value="newsletter">
+						<input
+							class="text-footerText input border-none bg-transparent w-full p-2 newsletter focus:outline-none"
+							id="NewsletterForm--{{ section.id }}" type="email" name="contact[email]"
+							autocomplete="email" {% if form.errors %} autofocus aria-invalid="true"
+							aria-describedby="Newsletter-error--{{ section.id }}" {% elsif form.posted_successfully? %}
+							aria-describedby="Newsletter-success--{{ section.id }}" {% endif %}
+							placeholder="{{ 'general.newsletter_form.newsletter_email' | t }}" required
+							{%- if form.posted_successfully? -%}
+								disabled
+								readonly
+								value="{{ 'general.newsletter_form.subscribed' | t }}"
+							{%- else -%}
+								value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off"
+							{%- endif -%}
+						>
+						{% style %} input.newsletter::placeholder { color: currentColor; opacity: 60%; } {% endstyle %}
+						{%- if form.errors -%}
+							<small id="Newsletter-error--{{ section.id }} absolute text-red-700 transform -translate-y-[130%]">
+								{{ form.errors.translated_fields['email'] | capitalize }} 
+								{{ form.errors.messages['email'] }}
+							</small>
+						{%- endif -%}
+						<button {% if form.posted_successfully? %} disabled {% endif %} type="submit" class="m-2" aria-label="Submit Newsletter Signup">
+							<span class="block w-4 h-6 transform -rotate-90">
+								{% render 'icons' icon: 'chevron' %}
+							</span>
+						</button>
+					{% endform %}
+				</div>
+				<div class="flex relative justify-center md:justify-start my-4">
+					{% render 'social_icons' %}
+				</div>
+			</div>
+
+			<!-- Menu Links -->
+			<div class="lg:hidden">
+				{% render 'mobile-accordion' %}
+			</div>
+
+			<div class="hidden flex-grow lg:block">
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-20">
+					<div>
+						<!-- Menu 1/2 -->
+						{% render 'footer-menu' with section.settings.primary_menu as menu %}
+					</div>
+					<div>
+						<!-- Menu 2/2 -->
+						{% render 'footer-menu' with section.settings.secondary_menu as menu %}
+					</div>
+					<div>
+						<!-- Menu 2/2 -->
+						{% render 'footer-menu' with section.settings.tertiary_menu as menu %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Trademark Footer -->
+		<div class="py-4 sm:border-t">
+			<div class="flex flex-col md:flex-row text-center md:text-left items-center justify-between h-full w-full">
+				<div class="pb-4 md:pb-0 {{ settings.footer_copyright_font_size_mb }} {{ settings.footer_copyright_font_size_dt }} {{ settings.footer_copyright_font }}">
+					{{ section.settings.copyright_text }}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "footer",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}

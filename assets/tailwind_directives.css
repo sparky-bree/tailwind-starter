@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-body font-body;
+    }
+    h1 {
+        @apply text-h1 font-heading;
+    }
+    h2 {
+        @apply text-h2 font-heading;
+    }
+    h3 {
+        @apply text-h3 font-heading;
+    }
+    h4 {
+        @apply text-h4 font-heading;
+    }
+    h5 {
+        @apply text-h5 font-heading;
+    }
+    h6 {
+        @apply text-h6 font-heading;
+    }
+    input {
+        @apply bg-inputBg border border-inputBorderColor min-h-inputMinHeight pt-inputTop pb-inputBottom px-inputX rounded-inputBorderRadius text-inputTextColor focus:bg-inputBgFocus focus:border-inputBorderColorFocus focus:text-inputTextColorFocus outline-none;
+    }
+    select {
+        @apply input appearance-none bg-no-repeat bg-right bg-[url('data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12'%3E%3Cpath data-name='Right Chevron' d='M1.183 12 0 10.849 4.982 6 0 1.151 1.183 0l5.572 5.425a.8.8 0 0 1 0 1.151z'/%3E%3C/svg%3E')];
+    }
+    p {
+        @apply py-1;
+    }
+}
+
+@layer components {
+    .button {
+        @apply cursor-pointer font-button text-button border border-buttonBorder rounded-buttonBorderRadius min-h-buttonMinHeight min-w-buttonMinWidth font-button bg-buttonBg pt-buttonTop pb-buttonBottom pl-buttonLeft pr-buttonRight text-buttonText enabled:hover:bg-buttonBgHover enabled:hover:text-buttonTextHover w-max disabled:opacity-40 disabled:cursor-not-allowed;
+    }
+    .button-secondary {
+        @apply button border border-buttonSecondaryBorder bg-buttonSecondaryBg text-buttonSecondaryText enabled:hover:bg-buttonSecondaryBgHover enabled:hover:text-buttonSecondaryTextHover;
+    }
+}
