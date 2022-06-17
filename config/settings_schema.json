@@ -302,31 +302,31 @@
         "id": "input_background",
         "label": "Background Color",
         "type": "color",
-        "default": "#000000"
+        "default": "#fff"
       },
       {
         "id": "input_border",
         "label": "Border Color",
         "type": "color",
-        "default": "#000000"
+        "default": "#ebebeb"
       },
       {
         "id": "input_text",
         "label": "Text Color",
         "type": "color",
-        "default": "#ffffff"
+        "default": "#000"
       },
       {
         "id": "input_background_focus",
         "label": "Background Color - Focus",
         "type": "color",
-        "default": "#ffffff"
+        "default": "#fafafa"
       },
       {
         "id": "input_border_focus",
         "label": "Border Color - Focus",
         "type": "color",
-        "default": "#ffffff"
+        "default": "#000"
       },
       {
         "id": "input_text_focus",

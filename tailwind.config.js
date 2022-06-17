@@ -9,6 +9,17 @@ module.exports = {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                checkmark: 'var(--input-checkmark-bg)',
+                selectArrow: 'var(--input-select-arrow-bg)',
+                selectArrowFocus: 'var(--input-select-arrow-bg-focus)'
+            },
+            backgroundPosition: {
+                selectBgPosition: 'center right var(--input-x-padding)'
+            },
+            backgroundSize: {
+                '50%': 'auto 40%'
+            },
             borderRadius: {
                 buttonBorderRadius: 'var(--button-border-radius)',
                 inputBorderRadius: 'var(--input-border-radius)'

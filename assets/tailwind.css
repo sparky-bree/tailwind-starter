@@ -466,7 +466,8 @@ h6 {
   font-weight: var(--heading-font-weight);
 }
 
-input,  select {
+input:not([type="checkbox"], [type="radio"]), 
+    .input {
   min-height: var(--input-min-height);
   border-radius: var(--input-border-radius);
   border-width: 1px;
@@ -481,10 +482,137 @@ input,  select {
   outline-offset: 2px;
 }
 
-input:focus,  select:focus {
+input:not([type="checkbox"], [type="radio"]):focus, 
+    .input:focus {
   border-color: var(--input-border-color-focus);
   background-color: var(--input-background-color-focus);
   color: var(--input-text-color-focus);
+}
+
+input[type="radio"] {
+  position: relative;
+  display: flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+input[type="radio"]::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  border-width: 1px;
+  content: var(--tw-content);
+  border-color: var(--input-border-color);
+}
+
+input[type="radio"]::after {
+  height: 50%;
+  width: 50%;
+  content: var(--tw-content);
+  border-radius: 9999px;
+}
+
+input[type="radio"]:checked::before {
+  border-color: var(--input-border-color-focus);
+  content: var(--tw-content);
+  background-color: var(--input-background-color-focus);
+}
+
+input[type="radio"]:checked::after {
+  z-index: 10;
+  content: var(--tw-content);
+  background-color: var(--input-border-color-focus);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  display: flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+input[type="checkbox"]::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  border-width: 1px;
+  content: var(--tw-content);
+  border-color: var(--input-border-color);
+}
+
+input[type="checkbox"]::after {
+  height: 100%;
+  content: var(--tw-content);
+  width: 100%;
+}
+
+input[type="checkbox"]:checked::before {
+  border-color: var(--input-border-color-focus);
+  content: var(--tw-content);
+  background-color: var(--input-background-color-focus);
+}
+
+input[type="checkbox"]:checked::after {
+  z-index: 10;
+  content: var(--tw-content);
+  background-image: var(--input-checkmark-bg);
+}
+
+
+    select {
+  min-height: var(--input-min-height);
+  border-radius: var(--input-border-radius);
+  border-width: 1px;
+  border-color: var(--input-border-color);
+  background-color: var(--input-background-color);
+  padding-left: var(--input-x-padding);
+  padding-right: var(--input-x-padding);
+  padding-top: var(--input-top-padding);
+  padding-bottom: var(--input-bottom-padding);
+  color: var(--input-text-color);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+
+    select:focus {
+  border-color: var(--input-border-color-focus);
+  background-color: var(--input-background-color-focus);
+  color: var(--input-text-color-focus);
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--input-background-color);
+  background-image: var(--input-select-arrow-bg);
+  background-size: auto 40%;
+  background-position: center right var(--input-x-padding);
+  background-repeat: no-repeat;
+}
+
+select:focus {
+  background-image: var(--input-select-arrow-bg-focus);
 }
 
 p {
@@ -1164,6 +1292,10 @@ p {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .overflow-hidden {
@@ -1852,10 +1984,6 @@ p {
 @media (min-width: 1024px) {
   .lg\:block {
     display: block;
-  }
-
-  .lg\:hidden {
-    display: none;
   }
 
   .lg\:max-w-\[25\%\] {

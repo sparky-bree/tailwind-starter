@@ -1,5 +1,5 @@
 <div class="container-2xl p-8">
-    <div class="grid grid-cols-2 gap-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
         <div class="flex flex-col gap-8">
             <div class="flex flex-col">
                 <h1>Heading 1</h1>
@@ -25,18 +25,53 @@
                 <button disabled class="button">Disabled Primary</button>
                 <button disabled class="button-secondary">Disabled Secondary</button>
             </div>
-            <input type="text" placeholder="text input">
-            <input type="email" value="email input" value="email input">
-            <input type="search" value="search input" placeholder="search input">
-            <input class="button w-full" type="button" value="submit">
-            <select>
-                <option selected disabled>Make your selection...</option>
-                <option>First option</option>
-                <option>Second option</option>
-                <option>Third option</option>
-                <option>Fourth option</option>
-                <option>Fifth option</option>
-            </select>
+            <fieldset class="flex flex-col gap-2">
+                <input type="text" placeholder="text input">
+                <input type="email" value="email input" value="email input">
+                <input type="search" value="search input" placeholder="search input">
+                <select>
+                    <option selected disabled>Make your selection...</option>
+                    <option>First option</option>
+                    <option>Second option</option>
+                    <option>Third option</option>
+                    <option>Fourth option</option>
+                    <option>Fifth option</option>
+                </select>
+                <div class="flex flex-col gap-4 py-4">
+                    <div class="flex gap-4">
+                        <span class="flex flex-wrap items-center gap-1">
+                            <input id="radio-1" value="1" type="radio" name="example">
+                            <label for="radio-1">Radio - 1</label>
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <input id="radio-2" value="2" type="radio" name="example">
+                            <label for="radio-2">Radio - 2</label>
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <input id="radio-3" value="3" type="radio" name="example">
+                            <label for="radio-3">Radio - 3</label>
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <input id="radio-4" value="4" type="radio" name="example">
+                            <label for="radio-4">Radio - 4</label>
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="flex items-center gap-1">
+                            <input id="checkbox-1" value="1" type="checkbox" name="example">
+                            <label for="checkbox-1">Checkbox - 1</label>
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <input id="checkbox-2" value="1" type="checkbox" name="example">
+                            <label for="checkbox-2">Checkbox - 2</label>
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <input id="checkbox-3" value="1" type="checkbox" name="example">
+                            <label for="checkbox-3">Checkbox - 3</label>
+                        </span>
+                    </div>
+                </div>
+            </fieldset>
         </div>
     </div>
 </div>
