@@ -6,22 +6,22 @@
     body {
         @apply text-body font-body;
     }
-    h1 {
+    h1, .h1 {
         @apply text-h1 font-heading;
     }
-    h2 {
+    h2, .h2 {
         @apply text-h2 font-heading;
     }
-    h3 {
+    h3, .h3 {
         @apply text-h3 font-heading;
     }
-    h4 {
+    h4, .h4 {
         @apply text-h4 font-heading;
     }
-    h5 {
+    h5, .h5 {
         @apply text-h5 font-heading;
     }
-    h6 {
+    h6, .h6 {
         @apply text-h6 font-heading;
     }
     input:not([type="checkbox"], [type="radio"]),
@@ -37,7 +37,7 @@
     select {
         @apply input bg-inputBg bg-50% bg-selectArrow appearance-none bg-no-repeat bg-selectBgPosition focus:bg-selectArrowFocus;
     }
-    p {
+    p, .p {
         @apply py-1;
     }
 }
