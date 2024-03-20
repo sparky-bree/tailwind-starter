@@ -1,106 +1,10 @@
 {
   "sections": {
-    "16494276545f86d3c6": {
-      "type": "hero",
-      "settings": {
-        "populate_automatically": false,
-        "heading_tag": "h1",
-        "background_color": "#ffffff",
-        "desktop_heading": "<p>CONTACT US<\/p>",
-        "copy": "",
-        "desktop_button_text": "",
-        "desktop_button_link": "",
-        "button_uppercase": false,
-        "mobile_content_width": 100,
-        "tablet_content_width": 90,
-        "desktop_content_width": 80,
-        "heading_font_family": "font-heading",
-        "copy_font_family": "font-heading",
-        "button_font_family": "font-heading",
-        "heading_font_weight": "font-semibold",
-        "copy_font_weight": "font-semibold",
-        "button_font_weight": "font-bold",
-        "desktop_image": "shopify:\/\/shop_images\/PRO-Compression-Frequently-Asked-Quesetions.jpg",
-        "desktop_image_height": 500,
-        "content_desktop_alignment": "md:justify-start",
-        "text_desktop_alignment": "md:text-left",
-        "heading_font_size_desktop": "sm:text-5xl",
-        "copy_font_size_desktop": "sm:text-lg",
-        "button_font_size_desktop": "sm:text-base",
-        "button_x_padding_dt": 48,
-        "button_y_padding_dt": 20,
-        "desktop_text_color": "#060000",
-        "button_bg": "#ffffff",
-        "button_border": "#ffffff",
-        "button_hover_bg": "#000000",
-        "button_hover_border": "#000000",
-        "button_text": "#000000",
-        "button_hover_text": "#ffffff",
-        "mobile_image_height": 300,
-        "text_mobile_alignment": "text-left",
-        "text_mobile_vertical_alignment": "justify-center",
-        "heading_font_size_mobile": "text-3xl",
-        "copy_font_size_mobile": "text-lg",
-        "button_font_size_mobile": "text-base",
-        "button_x_padding_mb": 48,
-        "button_y_padding_mb": 20,
-        "mobile_text_color": "#ffffff",
-        "mobile_button_bg": "#ffffff",
-        "mobile_button_border": "#ffffff",
-        "mobile_button_text": "#000000"
-      }
-    },
-    "16494277038411cb8a": {
-      "type": "copy",
-      "disabled": true,
-      "settings": {
-        "main": false,
-        "text_alignment": "text-left",
-        "heading_tag": "strong",
-        "heading": "We're here to help",
-        "heading_font_size": "text-xl",
-        "copy": "<p><\/p>",
-        "copy_font_size": "text-base",
-        "full_width": false
-      }
-    },
-    "1636652948d9636352": {
-      "type": "contact",
-      "settings": {
-        "bg_color": "#ffffff",
-        "text_color": "#000000",
-        "heading": "<p><strong>We're here to help<\/strong><\/p>",
-        "heading_tag": "h1",
-        "form_heading": "<p>Contact Us<\/p>",
-        "copy": "<p><\/p>",
-        "mobile_vertical_padding": "py-8",
-        "mobile_horizontal_padding": "px-8",
-        "desktop_vertical_padding": "md:py-12",
-        "desktop_horizontal_padding": "md:px-8",
-        "heading_font_family": "font-heading",
-        "form_heading_font_family": "font-heading",
-        "form_label_font_family": "font-body",
-        "form_input_font_family": "font-body",
-        "copy_font_family": "font-body",
-        "desktop_heading_font_size": "md:text-2xl",
-        "desktop_form_heading_font_size": "md:text-xl",
-        "desktop_copy_font_size": "md:text-sm",
-        "desktop_form_label_font_size": "md:text-base",
-        "mobile_heading_font_size": "text-xl",
-        "mobile_form_heading_font_size": "text-xl",
-        "mobile_copy_font_size": "text-base",
-        "mobile_form_label_font_size": "text-base",
-        "text_alignment": "text-left",
-        "text_alignment_form": "text-left",
-        "content_full_width": false,
-        "heading_bottom_spacing": 16,
-        "copy_bottom_spacing": 16
-      }
+    "main": {
+      "type": "contact"
     }
   },
   "order": [
-    "16494276545f86d3c6",
-    "16494277038411cb8a",
-    "1636652948d9636352"
+    "main"
   ]
 }

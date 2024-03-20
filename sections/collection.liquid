@@ -1,10 +1,10 @@
-{% paginate collections by 12 %}
+{% paginate collection.products by 12 %}
   <div class="container px-4 py-8 md:py-16">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      {% for collection in collections %}
-        <a href="{{ collection.url }}" class="flex flex-col relative">
+      {% for product in collection.products %}
+        <a href="{{ product.url }}" class="flex flex-col relative">
           <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-40 text-white p-4">
-            {{ collection.title | strip_html }}
+            {{ product.title | strip_html }}
           </div>
         </a>
       {% endfor %}
@@ -15,12 +15,12 @@
 
 {% schema %}
 {
-  "name": "Collection List",
+  "name": "Collection",
   "tag": "section",
-  "class": "section collection-list",
+  "class": "section collection",
   "presets": [
     {
-      "name": "Collection List"
+      "name": "Collection"
     }
   ]
 }

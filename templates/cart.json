@@ -1,12 +1,10 @@
 {
   "sections": {
-    "16388158013b3493f8": {
-      "type": "cart",
-      "settings": {
-      }
+    "main": {
+      "type": "cart"
     }
   },
   "order": [
-    "16388158013b3493f8"
+    "main"
   ]
 }

@@ -1,12 +1,10 @@
 {
   "sections": {
-    "1638814412b602fef1": {
-      "type": "search",
-      "settings": {
-      }
+    "main": {
+      "type": "search"
     }
   },
   "order": [
-    "1638814412b602fef1"
+    "main"
   ]
 }
