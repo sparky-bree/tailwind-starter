@@ -1,0 +1,27 @@
+{
+  "name": "sparky-starter",
+  "version": "1.0",
+  "description": "Custom Shopify theme using Tailwind and Shopify 2.0. Built with love by Sparky.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "dev": "shopify theme dev --store=sparky-sandbox",
+    "tailwind": "NODE_ENV=development npm run generate:css -- --minify --watch",
+    "push": "npm run build:css && shopify theme push -u --store=sparky-sandbox",
+    "pull": "npm run build:css && shopify theme pull -u --store=sparky-sandbox",
+    "preview": "npm run build:css && shopify theme push --theme=$(git branch --show-current) -u --store=sparky-sandbox",
+    "update": "npm run build:css && shopify theme push --theme=$(git branch --show-current) --store=sparky-sandbox",
+    "build:css": "NODE_ENV=production npm run generate:css -- --minify",
+    "generate:css": "npx tailwindcss@3.4.1  -i ./assets/tailwind_directives.css tailwindcss -o assets/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoSparky/sparky-starter"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoSparky/sparky-starter/issues"
+  },
+  "homepage": "https://github.com/YoSparky/sparky-starter#readme"
+}
